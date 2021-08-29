@@ -31,12 +31,15 @@ safetyDistance = distance;
 if (safetyDistance <= 5){
   digitalWrite(buzzer, HIGH);
   digitalWrite(ledPin, HIGH);
+  digitalWrite(vibration motor, HIGH);
 }
 else{
   digitalWrite(buzzer, LOW);
   digitalWrite(ledPin, LOW);
+  digitalWrite(vibration motor, LOW);
 }
 // Prints the distance on the Serial Monitor
 Serial.print("Distance: ");
 Serial.println(distance);
 }
+
