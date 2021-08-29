@@ -1,7 +1,7 @@
 # distance-alarming-face-shield
 for research purposes only
 
-materials;
+materials:
 grove ultrasonic ranger
 grove-piezo buzzer
 grove rgb led stick
