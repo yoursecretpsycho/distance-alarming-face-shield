@@ -23,3 +23,20 @@ void loop()
     Serial.println(" cm");
     delay(250);
 }
+
+OR
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  Serial.print("Sensor 01: ");
+  Serial.print(ultrasonic1.read()); // Prints the distance on the default unit (centimeters)
+  Serial.println("cm");
+
+  Serial.print("Sensor 02: ");
+  Serial.print(ultrasonic2.read(CM)); // Prints the distance making the unit explicit
+  Serial.println("cm");
+
+  delay(1000);
