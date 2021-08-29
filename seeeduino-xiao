@@ -1,0 +1,42 @@
+
+//defines port number
+int buzzer = ; //the Grove port No. you attached a buzzer to
+int rgb LED = ; //the Grove port No. you attached a rgb LED to
+int Grove Ultrasonic Ranger = ; //the Grove port No. you attached an ultrasonic ranger to
+int vibration motor = ;
+
+//defines variables
+long duration;
+int distance;
+int safetyDistance;
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode (buzzer, OUTPUT);
+pinMode (rgb LED, OUTPUT);
+pinMode (Grove Ultrasonic Ranger, INPUT);
+pinMode (vibration motot, OUTPUT);
+Serial.begin(9600); // Starts the serial communication
+}
+
+
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  
+// Calculating the distance
+distance= duration*0.034/2;
+
+safetyDistance = distance;
+if (safetyDistance <= 5){
+  digitalWrite(buzzer, HIGH);
+  digitalWrite(ledPin, HIGH);
+}
+else{
+  digitalWrite(buzzer, LOW);
+  digitalWrite(ledPin, LOW);
+}
+// Prints the distance on the Serial Monitor
+Serial.print("Distance: ");
+Serial.println(distance);
+}
